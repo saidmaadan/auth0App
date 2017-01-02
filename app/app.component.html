@@ -17,8 +17,9 @@
       </ul>
   
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" (click)="auth.login()">Sign In</a></li>
-        <li><a routerLink="/profile">Profile</a></li>
+        <li><a href="#" (click)="auth.login()" *ngIf="!auth.authenticated()">Sign In</a></li>
+        <li><a routerLink="/profile" *ngIf="auth.authenticated()">Profile</a></li>
+         <li><a href="#" (click)="auth.logout()" *ngIf="auth.authenticated()">Sign Out</a></li>
 
       </ul>
     </div><!--/.nav-collapse -->

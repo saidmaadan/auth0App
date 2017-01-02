@@ -1,1 +1,13 @@
 <h1>Profile</h1>
+<h4>UserName: {{profile.nickname}}</h4>
+<div class="row">
+  <div class="col-md-2">
+    <img style="width:100%" class='thumbnail' src="{{profile.picture}}">
+  </div>
+  <div class="col-md-10">
+    <ul>
+  <li class="list-group-item"><strong>Email: </strong>{{profile.name}}</li>
+  <li class="list-group-item"><strong>Created At: </strong>{{profile.updated_at | date}}</li>
+</ul>
+  </div>
+</div>
