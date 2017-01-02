@@ -17,12 +17,14 @@
       </ul>
   
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" (click)="auth.login()">Sign In</a></li>
         <li><a routerLink="/profile">Profile</a></li>
+
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
 
 <div class="container">
-    <router-outlet></router-outlet>
-  </div>
+  <router-outlet></router-outlet>
+</div>
