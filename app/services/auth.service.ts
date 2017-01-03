@@ -1,5 +1,8 @@
 import { Injectable }      from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
+import { options } from '../auth.options';
+import { ApiKey } from '../ApiKey';
+
 
 // Avoid name not found warnings
 declare var Auth0Lock: any;
@@ -7,7 +10,7 @@ declare var Auth0Lock: any;
 @Injectable()
 export class Auth {
   // Configure Auth0
-  lock = new Auth0Lock('API_Key', 'inventivelabs.auth0.com', {});
+  lock = new Auth0Lock('ApiKey.apikey', 'inventivelabs.auth0.com', options);
 
   constructor() {
     // Add callback for lock `authenticated` event

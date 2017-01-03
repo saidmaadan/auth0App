@@ -7,11 +7,13 @@ import { AppComponent }  from './app.component';
 import { HomeComponent }  from './components/home/home.component';
 import { ProfileComponent }  from './components/profile/profile.component';
 import { Auth } from './services/auth.service';
+import { AuthGuard } from './auth.guard';
+import { ApiKey } from './ApiKey';
 
 @NgModule({
   imports:      [ BrowserModule, routing ],
   declarations: [ AppComponent, HomeComponent, ProfileComponent  ],
   bootstrap:    [ AppComponent ],
-  providers:    [appRoutingProviders, AUTH_PROVIDERS, Auth]
+  providers:    [appRoutingProviders, AUTH_PROVIDERS, Auth, AuthGuard, ApiKey]
 })
 export class AppModule { }
